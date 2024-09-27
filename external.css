@@ -1,0 +1,295 @@
+/** 
+
+External css is a way of applying css making it's own file.
+You link the .css file to the approproate .html file by 
+the use of a tag known as link and the attribute rel/href
+
+border vs margin: A border is the outline around the padding or box. 
+The margin is the space of the content outside of the box and the box itself.
+
+**/ 
+
+/** In the case below, we will be using an id attribute **/
+#font{
+
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+/** Adding banner image**/
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("grayWood.webp");
+    background-repeat: none;
+    
+  }
+
+
+/** Inorder to make the underline in the link disapper, make sure to set the four pesudo classes of "a", text-decoration to none 
+  a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+    color: white
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
+**/
+
+  
+  /** banner css **/
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("wsu.jpeg"); /** values make the background a bit darker for text appear **/
+    height: 50%;
+    /**background-position: center; **/
+    background-repeat: no-repeat; /** images in the background may repeat vertically or horizontally **/
+    background-size: cover;
+    position: relative;
+   /** background-color: lightblue; **/
+    border-bottom: 4px solid black; /** only adjusting the bottom border **/
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .icon{
+    transition: background-color 0.3s ease; /** there's a delay in which the color of the logo changes from background to what's below **/
+  }
+
+  /** hyperlink images css **/ 
+  .icon:hover{
+   /** background: white, have a color but it's sqaure and not parallel to the actual image **/
+    width: 5%;
+    height: 5%;
+  }
+
+  /** photo for banner css **/
+
+  #photo{
+
+    border: 4px solid black;
+    width: 105px; 
+    position: absolute;
+    top: 43%;
+    left: 47%;
+
+  }
+  
+  /** create a text box like content
+  Demonstrates best use of div tag by placing about me box appropriately
+  in fact, anytime you want to place a image or text box anywhere try to use a div tag
+  **/
+
+#AboutMe{
+    width: 580px; /** dimension of box **/
+    height: 300px;
+    padding: 10px; /** padding is the space between the content and the border, we're using shorthand property so 10 applies all four sides **/
+    border: 5px solid rgb(35, 34, 34); 
+    margin-top: 70px; /** The space outside of the border vs the box itself, but let's not use short hand property and specify, useful to move box down from hero image  **/
+    margin-left: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("black-background.webp");
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: white;
+    font-size: 36px;
+    background-size: auto;
+}
+
+#InfoBox1{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: rgba(152, 148, 148, 0.845);
+    font-size: 18px;
+   
+}
+
+/** list of csc classes taken text box **/
+#classes{
+
+    width: 200px; /** dimension of box **/
+    height: 200px;
+    padding: 10px; /** padding is the space between the content and the border, we're using shorthand property so 10 applies all four sides **/
+    border: 5px solid rgb(35, 34, 34); 
+    margin-top: 70px; /** The space outside of the border vs the box itself, but let's not use short hand property and specify, useful to move box down from hero image  **/
+    margin-left: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: white;
+    font-size: 12px;
+    background-size: auto; 
+
+    /** Things to note
+    - The position element has four values: static, relative, absolute, or fixed
+    - Static is default but if explcilty written it will not be affected by the left, right, or other position properties
+    - We will use absolute has it is affected by the positioning elements above, allowing us to put both textboxes next to each other. 
+    - The positioning elements above allows us to move certain things on our document page. 
+    **/
+    position: absolute;
+    right: 41%;
+    top: 55%;    
+}
+
+/** Images for classes css box model **/
+#images_for_classes1{
+  position: absolute;
+  bottom: 75%;
+  left: 30%
+}
+
+
+
+#images_for_classes2{
+  position: absolute;
+  bottom: 60%;
+  left: 26%
+}
+
+
+#images_for_classes3{
+  position: absolute;
+  bottom: 48%;
+  left: 26%
+}
+
+#images_for_classes4{
+  position: absolute;
+  bottom: 36%;
+  left: 26%
+}
+
+#images_for_classes5{
+  position: absolute;
+  bottom: 25%;
+  left: 27.9%
+}
+
+
+/** pesudo links css box model **/
+
+/** image one**/
+.imageone_one:link{
+  color: white;
+  text-decoration: none; 
+}
+.imageone_two:visited{
+  color: white;
+  text-decoration: none; 
+}
+.imageone_three:hover{
+  color:yellow;
+  text-decoration: underline yellow;
+}
+.imageone_four:active{
+  color:blue;
+  text-decoration: none;
+}
+
+/** image two, three, four**/
+.imagetwo_one:link{
+  color: white;
+  text-decoration: none;
+}
+.imagetwo_two:visited{
+  color: white;
+  text-decoration: none;
+}
+.imagetwo_three:hover{
+  color:rgb(9, 151, 216);
+  text-decoration: underline rgb(9, 151, 216);
+}
+.imagetwo_four:active{
+  color:blue;
+  text-decoration: none;
+}
+
+/** image five **/
+.imagefive_one:link{
+  color: white;
+  text-decoration: none;
+}
+.imagefive_two:visited{
+  color: white;
+  text-decoration: none;
+}
+.imagefive_three:hover{
+  color:rgb(216, 92, 9);
+  text-decoration: underline rgb(216, 92, 9);
+}
+.imagefive_four:active{
+  color:rgb(216, 92, 9);
+  text-decoration: none;
+}
+
+/** css box model for contact info **/
+
+#contact_info{
+  width: 200px; /** dimension of box **/
+  height: 200px;
+  padding: 10px; /** padding is the space between the content and the border, we're using shorthand property so 10 applies all four sides **/
+  border: 5px solid rgb(35, 34, 34); 
+  margin-top: 70px; /** The space outside of the border vs the box itself, but let's not use short hand property and specify, useful to move box down from hero image  **/
+  margin-left: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif ;
+  color: white;
+  font-size: 12px;
+  background-size: auto; 
+  position: absolute;
+  right: 23%;
+  top: 55%; 
+}
+
+/** images/links for contact info css box model **/
+
+#image_one_CI{
+  position: absolute;
+  top: 15%;
+  right: 64%
+}
+
+#image_two_CI{
+  position: absolute;
+  top: 27%;
+  right: 76%;
+}
+
+#image_three_CI{
+  position: absolute;
+  top: 39%;
+  right: 82%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
